@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>统一建模语言理论测试</title>
+	<style type="text/css">
+		/* 外边框样式及整个页面字体设置 */
+		body {
+			font-family: Microsoft YaHei;
+			font-size: 12px;
+			border: solid 3px red;
+			border-radius: 2px;
+		}
+		
+		/* 字体居中 */
+		.center {
+			text-align: center;
+		}
+		
+		/* 包围盒样式 */
+		.border {
+			border: solid 1px #CCC;
+			border-radius: 6px;
+			margin-top: 1em;
+		}
+		
+		/* 考试信息水平排列 */
+		.inline {
+			display: inline-block;
+			width: 30.6%;
+		}
+		
+		/* 试卷内容与边框距离 */
+		.expand {
+			margin: 1em;
+		}
+		
+		/* 输入框样式 */
+		input[type="text"]{
+			border: solid 1px #CCE;
+			border-radius: 2px;
+			height: 25px;
+		}
+		
+		/* 简答题答题框样式 */
+		textarea {
+			border: solid 1px #CCE;
+			border-radius: 2px;
+			width: 95%;
+			height: 100px;
+		}
+		
+		/* 每一小问之间的间距 */
+		li {
+			margin-top: 1em;
+		}
+		
+		/* 问题与包围盒下间距 */
+		ol {
+			margin-bottom: 2em;
+		}
+		
+		/* 增大问题与答案间距 */
+		.answer {
+			margin-top: 6px;
+		}
+		
+		/* 计算分数按钮的样式 */
+		#calculate {
+			background-color: #428BCA;
+			border: none;
+			border-radius: 3px;
+			color: white;
+			margin-top: 20px;
+			width: 70px;
+			height: 30px;
+			font-weight:bold;
+			font-family: Microsoft YaHei;
+		}
+		
+		/* 字体加粗的样式 */
+		.question, #head label{
+			font-weight: bold;
+		}
+		
+		/* 判断题对勾的样式 */
+		.right{
+			color:Green;
+			font-weight:bold;
+		}
+		
+		/* 判断题叉的样式 */
+		.wrong{
+			color:Red;
+			font-weight:bold;
+		}
+	</style>
+</head>
+
+<body>
+    <div id="testPaper">
+        <div id="testName" class="center">
+            <h1>统一建模语言理论测试</h1>
+        </div>
+        <div id="testContent" class="expand">
+            <form id="testForm" name="testForm" method="post" action="#">
+                <div id="head">
+					<div class="border">
+						<div class="inline expand">
+							<span><b>考试科目：</b>统一建模语言</span>
+						</div>
+						<div class="inline expand">
+							<span><b>时间：</b>100分钟</span>
+						</div>
+						<div class="inline expand">
+							<span><b>得分：</b></span>
+						</div>
+					</div>
+					<div class="border">
+						<div class="inline expand">
+							<label for="className">班级（必填）: </label>
+							<input type="text" name="className" id="className" required="required" />
+
+						</div>
+						<div class="inline expand">
+							<label for="classNo">学号（必填）: </label>
+							<input type="text" name="classNo" id="classNo" required="required" />
+
+						</div>
+						<div class="inline expand">
+							<label for="userName">姓名（必填）: </label>
+							<input type="text" name="userName" id="userName" required="required" />
+						</div>
+					</div>
+                </div>
+                <div id="content">
+                    <div id="first"  class="border">
+                        <div class="expand"><h3>一、填空题（每空5分，共20分）</h3></div>
+						<div style="height:0.5px;background-color:#CCC;overflow:hidden;"></div>
+						<div class="expand">
+							<ol>
+								<li>
+									<div id="question_1_1">
+										<div><span class="question">UML的中文全称是：</span></div>
+										<div class="answer">
+											<input type="text" name="answer_1_1" />
+										</div>
+									</div>
+								</li>
+								<li>
+									<div id="question_1_2">
+										<div><span class="question">对象最突出的特征是：</span></div>
+										<div class="answer">
+											<span>
+												<input type="text" name="answer_1_2_1" />
+											</span>
+											<span>
+												<input type="text" name="answer_1_2_2" />
+											</span>
+											<span>
+												<input type="text" name="answer_1_2_3" />
+											</span>
+										</div>
+									</div>
+								</li>
+							</ol>
+						</div>
+                    </div>
+                    <div id="second" class="border">
+                        <div class="expand"><h3>二、选择题（每题10分，共20分）</h3></div>
+						<div style="height:0.5px;background-color:#CCC;overflow:hidden;"></div>
+						<div class="expand">
+							<ol>
+								<li>
+									<div id="question_2_1">
+										<div><span class="question">UML与软件工程的关系是：</span></div>
+										<div class="answer">
+											<input type="radio" name="answer_2_1" value="1" id="answer_2_1_1" />
+											<label for="answer_2_1_1">（A）UML就是软件工程</label>
+										</div>
+										<div>
+											<input type="radio" name="answer_2_1" value="2" id="answer_2_1_2" />
+											<label for="answer_2_1_2">（B）UML参与到软件工程中软件开发过程的几个阶段</label>
+										</div>
+										<div>
+											<input type="radio" name="answer_2_1" value="3" id="answer_2_1_3" />
+											<label for="answer_2_1_3">（C）UML与软件工程无关</label>
+										</div>
+										<div>
+											<input type="radio" name="answer_2_1" value="4" id="answer_2_1_4" />
+											<label for="answer_2_1_4">（D）UML是软件工程的一部分</label>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div id="question_2_2">
+										<div><span class="question">Java语言支持：</span></div>
+										<div class="answer">
+											<input type="radio" name="answer_2_2" value="1" id="answer_2_2_1" />
+											<label for="answer_2_2_1">（A）单继承</label>
+										</div>
+										<div>
+											<input type="radio" name="answer_2_2" value="2" id="answer_2_2_2" />
+											<label for="answer_2_2_2">（B）多继承</label>
+										</div>
+										<div>
+											<input type="radio" name="answer_2_2" value="3" id="answer_2_2_3" />
+											<label for="answer_2_2_3">（C）单继承和多继承都支持</label>
+										</div>
+										<div>
+											<input type="radio" name="answer_2_2" value="4" id="answer_2_2_4" />
+											<label for="answer_2_2_4">（D）单继承和多继承都不支持</label>
+										</div>
+									</div>
+								</li>
+							</ol>
+						</div>
+                    </div>
+                    <div id="third" class="border">
+                        <div class="expand"><h3>三、多项选择题（每题10分，共20分）</h3></div>
+						<div style="height:0.5px;background-color:#CCC;overflow:hidden;"></div>
+						<div class="expand">
+							<ol>
+								<li>
+									<div id="question_3_1">
+										<div><span class="question">用例的粒度分为以下哪三种：</span></div>
+										<div class="answer">
+											<input type="checkbox" name="answer_3_1" value="1" id="answer_3_1_1" />
+											<label for="answer_3_1_1">（A）概述级</label>
+										</div>
+										<div>
+											<input type="checkbox" name="answer_3_1" value="2" id="answer_3_1_2" />
+											<label for="answer_3_1_2">（B）需求级</label>
+										</div>
+										<div>
+											<input type="checkbox" name="answer_3_1" value="3" id="answer_3_1_3" />
+											<label for="answer_3_1_3">（C）用户目标级</label>
+										</div>
+										<div>
+											<input type="checkbox" name="answer_3_1" value="4" id="answer_3_1_4" />
+											<label for="answer_3_1_4">（D）子功能级</label>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div id="question_3_2">
+										<div><span class="question">类图由以下哪三部分组成：</span></div>
+										<div class="answer">
+											<input type="checkbox" name="answer_3_2" value="1" id="answer_3_2_1" />
+											<label for="answer_3_2_1">（A）名称（Name）</label>
+										</div>
+										<div>
+											<input type="checkbox" name="answer_3_2" value="2" id="answer_3_2_2" />
+											<label for="answer_3_2_2">（B）属性（Attribute）</label>
+										</div>
+										<div>
+											<input type="checkbox" name="answer_3_2" value="3" id="answer_3_2_3" />
+											<label for="answer_3_2_3">（C）操作（OPration）</label>
+										</div>
+										<div>
+											<input type="checkbox" name="answer_3_2" value="4" id="answer_3_2_4" />
+											<label for="answer_3_2_4">（D）方法（Function）</label>
+										</div>
+									</div>
+								</li>
+							</ol>
+						</div>
+                    </div>
+                    <div id="fourth" class="border">
+                        <div class="expand"><h3>四、判断题（每题10分，共20分）</h3></div>
+						<div style="height:0.5px;background-color:#CCC;overflow:hidden;"></div>
+						<div class="expand">
+							<ol>
+								<li>
+									<div id="question_4_1">
+										<span class="question">用例图只是用于和客户交流和共同的，用于确定需求。</span>
+										<span>
+											<input type="radio" name="answer_4_1" id="answer_4_1_1" value="1" />
+											<label for="answer_4_1_1" class="right">&#10003;</label>
+										</span>
+										<span>
+											<input type="radio" name="answer_4_1" id="answer_4_1_2" value="2" />
+											<label for="answer_4_1_2" class="wrong">&#10005;</label>
+										</span>
+									</div>
+								</li>
+								<li>
+									<div id="question_4_2">
+										<span class="question">在状态图中，终止状态在一个状态图中允许有任意多个。</span>
+										<span>
+											<input type="radio" name="answer_4_2" value="1" id="answer_4_2_1" />
+											<label for="answer_4_2_1" class="right">&#10003;</label>
+										</span>
+										<span>
+											<input type="radio" name="answer_4_2" value="2" id="answer_4_2_2" />
+											<label for="answer_4_2_2" class="wrong">&#10005;</label>
+										</span>
+									</div>
+								</li>
+							</ol>
+						</div>
+                    </div>
+                    <div id="fifth" class="border">
+                        <div class="expand"><h3>五、简答题（每题20分，共20分）</h3></div>
+						<div style="height:0.5px;background-color:#CCC;overflow:hidden;"></div>
+						<div class="expand">
+							<ol>
+								<li>
+									<div id="question_5_1">
+										<div><span class="question">简述什么是模型以及模型的表现形式？</span></div>
+										<div class="answer">
+											<span>
+												<textarea name="answer_5_1" id="answer_5_1"></textarea>
+											</span>
+										</div>
+									</div>
+								</li>
+							</ol>
+						</div>
+                    </div>
+                </div>
+                <div id="footer" class="center">
+                    <input type="submit" name="calculate" id="calculate" value="计算分数" />
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
