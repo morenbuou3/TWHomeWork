@@ -1,16 +1,5 @@
 # ThoughtWorks Session Review
 
-## 课程安排
-| Time             | Day1                 |
-|:----------------:|:--------------------:|
-| 10:00~10:30      | Warm up Welcome      |
-| 10:30~11:20      | Culture              |
-| 11:20~12:20      | Agile Methodology    |
-| 13:30~15:00      | Presentation Tips    |
-| 15:10~16:30      | Feedback             |
-| 16:30~17:00      | Review               |
-| 17:00~17:30      | Retro                |
-
 ## Welcome!
  简单的游戏让同学们相互间有了初步的了解
 
